@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>NISSAN 350Z — Ficha Vehículo</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#000d1a;color:#c8e8f0;font-family:'Rajdhani',sans-serif;min-height:100vh;padding:16px;}
+.card{background:linear-gradient(135deg,#051828,#030f1e);border:1px solid rgba(0,245,255,0.2);border-radius:20px;max-width:420px;margin:0 auto;overflow:hidden;box-shadow:0 0 40px rgba(0,245,255,0.08);}
+.card-top{position:relative;}
+.car-img{width:100%;height:180px;object-fit:cover;}
+.car-img-overlay{position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,#000d1a);}
+.car-name{font-family:'Orbitron',monospace;font-size:18px;font-weight:900;color:#fff;padding:14px 18px 4px;letter-spacing:2px;}
+.car-placa{font-size:12px;color:rgba(0,245,255,0.7);padding:0 18px 14px;letter-spacing:3px;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,245,255,0.3),transparent);margin:0 18px;}
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:14px 18px;}
+.data-item{padding:8px 0;}
+.data-lbl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#fff;opacity:0.7;margin-bottom:3px;}
+.data-val{font-size:13px;font-weight:700;color:#ffffff;}
+.data-val.cyan{color:#00f5ff;}
+.data-val.yellow{color:#ffe600;}
+.section{padding:14px 18px;border-top:1px solid rgba(255,255,255,0.06);}
+.sec-title{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:2px;margin-bottom:10px;color:rgba(255,255,255,0.5);}
+.alert-row{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;border-radius:10px;margin-bottom:6px;font-size:13px;font-weight:600;line-height:1.4;}
+.alert-row.crit{background:rgba(255,45,120,0.12);border:1px solid rgba(255,45,120,0.3);color:#ffe600;}
+.alert-row.warn{background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.25);color:#ffffff;}
+.al-icon{flex-shrink:0;font-size:15px;}
+.pend-row{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;}
+.pend-row:last-child{border-bottom:none;}
+.pnum{font-family:'Orbitron',monospace;font-size:11px;color:rgba(255,230,0,0.5);width:22px;flex-shrink:0;margin-top:1px;}
+.aceite-badge{display:inline-block;background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);border-radius:8px;padding:4px 10px;font-size:12px;color:#00f5ff;margin-top:4px;}
+.footer{text-align:center;padding:14px;font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:1px;border-top:1px solid rgba(255,255,255,0.05);}
+.no-alerts{color:rgba(0,255,136,0.7);font-size:13px;}
+.no-pending{color:rgba(0,255,136,0.7);font-size:13px;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-top">
+    <img class="car-img" src="data:image/png;base64,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" alt="NISSAN 350Z"/>
+    <div class="car-img-overlay"></div>
+  </div>
+  <div class="car-name">NISSAN 350Z</div>
+  <div class="car-placa">AA713HP</div>
+  <div class="divider"></div>
+  <div class="data-grid">
+    <div class="data-item">
+      <div class="data-lbl">KM Actual</div>
+      <div class="data-val cyan">35.290 km</div>
+    </div>
+    <div class="data-item">
+      <div class="data-lbl">Últ. Batería</div>
+      <div class="data-val">25 mar. 2025</div>
+    </div>
+    <div class="data-item">
+      <div class="data-lbl">Venc. RCV</div>
+      <div class="data-val" style="color:#ff2d78">12 dic. 2025</div>
+    </div>
+    <div class="data-item">
+      <div class="data-lbl">Total Invertido</div>
+      <div class="data-val yellow">$1.766</div>
+    </div>
+    <div class="data-item" style="grid-column:1/-1"><div class="data-lbl">Aceite</div><div class="aceite-badge">15W40 Semi Synt Motul</div></div>
+    
+  </div>
+  <div class="section">
+    <div class="sec-title">⚠️ ALERTAS ACTIVAS</div>
+    <div class="alert-row crit"><span class="al-icon">🔴</span><span>Aceite VENCIDO por fecha hace 544 días. Límite: 08 sept. 2024</span></div><div class="alert-row crit"><span class="al-icon">🔴</span><span>RCV VENCIDO hace 84 días (12 dic. 2025)</span></div>
+  </div>
+  <div class="section">
+    <div class="sec-title">📋 PENDIENTES</div>
+    <div class="pend-row"><span class="pnum">01</span><span>Gatos maleta</span></div><div class="pend-row"><span class="pnum">02</span><span>Disco y prensa Clutch</span></div><div class="pend-row"><span class="pnum">03</span><span>Equipo de sonido</span></div><div class="pend-row"><span class="pnum">04</span><span>Alineación y balanceo</span></div><div class="pend-row"><span class="pnum">05</span><span>Tapiceria limpieza</span></div><div class="pend-row"><span class="pnum">06</span><span>Vidrio piloto (Switch)</span></div><div class="pend-row"><span class="pnum">07</span><span>Bombines</span></div>
+  </div>
+  <div class="footer">FLOTA FAMILIAR · 5/3/2026</div>
+</div>
+</body>
+</html>

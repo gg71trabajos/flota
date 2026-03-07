@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
+<title>Toyota Land Cruiser Pick Up — Ficha Vehículo</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#000d1a;color:#c8e8f0;font-family:'Rajdhani',sans-serif;min-height:100vh;padding:16px;}
+.card{background:linear-gradient(135deg,#051828,#030f1e);border:1px solid rgba(0,245,255,0.2);border-radius:20px;max-width:420px;margin:0 auto;overflow:hidden;box-shadow:0 0 40px rgba(0,245,255,0.08);}
+.card-top{position:relative;}
+.car-img{width:100%;height:180px;object-fit:cover;}
+.car-img-overlay{position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,#000d1a);}
+.car-name{font-family:'Orbitron',monospace;font-size:18px;font-weight:900;color:#fff;padding:14px 18px 4px;letter-spacing:2px;}
+.car-placa{font-size:12px;color:rgba(0,245,255,0.7);padding:0 18px 14px;letter-spacing:3px;}
+.divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,245,255,0.3),transparent);margin:0 18px;}
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:14px 18px;}
+.data-item{padding:8px 0;}
+.data-lbl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#fff;opacity:0.7;margin-bottom:3px;}
+.data-val{font-size:13px;font-weight:700;color:#ffffff;}
+.data-val.cyan{color:#00f5ff;}
+.data-val.yellow{color:#ffe600;}
+.section{padding:14px 18px;border-top:1px solid rgba(255,255,255,0.06);}
+.sec-title{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:2px;margin-bottom:10px;color:rgba(255,255,255,0.5);}
+.alert-row{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;border-radius:10px;margin-bottom:6px;font-size:13px;font-weight:600;line-height:1.4;}
+.alert-row.crit{background:rgba(255,45,120,0.12);border:1px solid rgba(255,45,120,0.3);color:#ffe600;}
+.alert-row.warn{background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.25);color:#ffffff;}
+.al-icon{flex-shrink:0;font-size:15px;}
+.pend-row{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;}
+.pend-row:last-child{border-bottom:none;}
+.pnum{font-family:'Orbitron',monospace;font-size:11px;color:rgba(255,230,0,0.5);width:22px;flex-shrink:0;margin-top:1px;}
+.aceite-badge{display:inline-block;background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);border-radius:8px;padding:4px 10px;font-size:12px;color:#00f5ff;margin-top:4px;}
+.footer{text-align:center;padding:14px;font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:1px;border-top:1px solid rgba(255,255,255,0.05);}
+.no-alerts{color:rgba(0,255,136,0.7);font-size:13px;}
+.no-pending{color:rgba(0,255,136,0.7);font-size:13px;}
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="card-top">
+    <img class="car-img" src="data:image/png;base64,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" alt="Toyota Land Cruiser Pick Up"/>
+    <div class="car-img-overlay"></div>
+  </div>
+  <div class="car-name">Toyota Land Cruiser Pick Up</div>
+  <div class="car-placa">Sin Placa</div>
+  <div class="divider"></div>
+  <div class="data-grid">
+    <div class="data-item">
+      <div class="data-lbl">KM Actual</div>
+      <div class="data-val cyan">195.551 km</div>
+    </div>
+    <div class="data-item">
+      <div class="data-lbl">Últ. Batería</div>
+      <div class="data-val">29 abr. 2025</div>
+    </div>
+    <div class="data-item">
+      <div class="data-lbl">Venc. RCV</div>
+      <div class="data-val" style="color:#ff2d78">12 dic. 2025</div>
+    </div>
+    <div class="data-item">
+      <div class="data-lbl">Total Invertido</div>
+      <div class="data-val yellow">$908</div>
+    </div>
+    <div class="data-item" style="grid-column:1/-1"><div class="data-lbl">Aceite</div><div class="aceite-badge">20w50 Brava Mineral</div></div>
+    
+  </div>
+  <div class="section">
+    <div class="sec-title">⚠️ ALERTAS ACTIVAS</div>
+    <div class="alert-row crit"><span class="al-icon">🔴</span><span>Aceite VENCIDO por fecha hace 154 días. Límite: 03 oct. 2025</span></div><div class="alert-row crit"><span class="al-icon">🔴</span><span>Aceite VENCIDO por KM. Actual: 195,551 / Próximo: 15,000</span></div><div class="alert-row crit"><span class="al-icon">🔴</span><span>RCV VENCIDO hace 84 días (12 dic. 2025)</span></div>
+  </div>
+  <div class="section">
+    <div class="sec-title">📋 PENDIENTES</div>
+    <div class="no-pending">✅ Sin pendientes</div>
+  </div>
+  <div class="footer">FLOTA FAMILIAR · 5/3/2026</div>
+</div>
+</body>
+</html>
