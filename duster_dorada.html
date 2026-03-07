@@ -1,79 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8"/>
+<html lang="es"><head><meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"/>
-<title>DUSTER DORADA — Ficha Vehículo</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<title>DUSTER DORADA</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet"/>
 <style>
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:#000d1a;color:#c8e8f0;font-family:'Rajdhani',sans-serif;min-height:100vh;padding:16px;}
 .card{background:linear-gradient(135deg,#051828,#030f1e);border:1px solid rgba(0,245,255,0.2);border-radius:20px;max-width:420px;margin:0 auto;overflow:hidden;box-shadow:0 0 40px rgba(0,245,255,0.08);}
-.card-top{position:relative;}
-.car-img{width:100%;height:180px;object-fit:cover;}
+.card-top{position:relative;}.car-img{width:100%;height:180px;object-fit:cover;}
 .car-img-overlay{position:absolute;bottom:0;left:0;right:0;height:80px;background:linear-gradient(transparent,#000d1a);}
-.car-name{font-family:'Orbitron',monospace;font-size:18px;font-weight:900;color:#fff;padding:14px 18px 4px;letter-spacing:2px;}
-.car-placa{font-size:12px;color:rgba(0,245,255,0.7);padding:0 18px 14px;letter-spacing:3px;}
+.car-name{font-family:'Orbitron',monospace;font-size:17px;font-weight:900;color:#fff;padding:14px 18px 2px;letter-spacing:2px;}
+.car-placa{font-size:12px;color:rgba(0,245,255,0.7);padding:0 18px 12px;letter-spacing:3px;}
 .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(0,245,255,0.3),transparent);margin:0 18px;}
-.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:14px 18px;}
-.data-item{padding:8px 0;}
+.data-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;padding:12px 18px;}
+.data-item{padding:7px 0;}.data-item.full{grid-column:1/-1;}
 .data-lbl{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#fff;opacity:0.7;margin-bottom:3px;}
-.data-val{font-size:13px;font-weight:700;color:#ffffff;}
-.data-val.cyan{color:#00f5ff;}
-.data-val.yellow{color:#ffe600;}
-.section{padding:14px 18px;border-top:1px solid rgba(255,255,255,0.06);}
-.sec-title{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:2px;margin-bottom:10px;color:rgba(255,255,255,0.5);}
+.data-val{font-size:13px;font-weight:700;color:#fff;}.data-val.cyan{color:#00f5ff;}.data-val.yellow{color:#ffe600;}
+.aceite-badge{display:inline-block;background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);border-radius:8px;padding:4px 10px;font-size:12px;color:#00f5ff;margin-top:3px;}
+.section{padding:12px 18px;border-top:1px solid rgba(255,255,255,0.06);}
+.sec-title{font-family:'Orbitron',monospace;font-size:10px;font-weight:700;letter-spacing:2px;margin-bottom:8px;color:rgba(255,255,255,0.45);}
 .alert-row{display:flex;align-items:flex-start;gap:8px;padding:8px 12px;border-radius:10px;margin-bottom:6px;font-size:13px;font-weight:600;line-height:1.4;}
 .alert-row.crit{background:rgba(255,45,120,0.12);border:1px solid rgba(255,45,120,0.3);color:#ffe600;}
-.alert-row.warn{background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.25);color:#ffffff;}
+.alert-row.warn{background:rgba(255,107,53,0.1);border:1px solid rgba(255,107,53,0.25);color:#fff;}
 .al-icon{flex-shrink:0;font-size:15px;}
 .pend-row{display:flex;align-items:flex-start;gap:10px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,0.05);font-size:13px;}
 .pend-row:last-child{border-bottom:none;}
 .pnum{font-family:'Orbitron',monospace;font-size:11px;color:rgba(255,230,0,0.5);width:22px;flex-shrink:0;margin-top:1px;}
-.aceite-badge{display:inline-block;background:rgba(0,245,255,0.08);border:1px solid rgba(0,245,255,0.2);border-radius:8px;padding:4px 10px;font-size:12px;color:#00f5ff;margin-top:4px;}
-.footer{text-align:center;padding:14px;font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:1px;border-top:1px solid rgba(255,255,255,0.05);}
-.no-alerts{color:rgba(0,255,136,0.7);font-size:13px;}
-.no-pending{color:rgba(0,255,136,0.7);font-size:13px;}
-</style>
-</head>
-<body>
+.ok-row{color:rgba(0,255,136,0.7);font-size:13px;}
+.footer{text-align:center;padding:12px;font-size:10px;color:rgba(255,255,255,0.2);letter-spacing:1px;border-top:1px solid rgba(255,255,255,0.05);}
+</style></head><body>
 <div class="card">
-  <div class="card-top">
-    <img class="car-img" src="data:image/png;base64,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" alt="DUSTER DORADA"/>
-    <div class="car-img-overlay"></div>
-  </div>
+  <div class="card-top"><img class="car-img" src="data:image/png;base64,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" alt="DUSTER DORADA"/><div class="car-img-overlay"></div></div>
   <div class="car-name">DUSTER DORADA</div>
   <div class="car-placa">AK888ZA</div>
   <div class="divider"></div>
   <div class="data-grid">
-    <div class="data-item">
-      <div class="data-lbl">KM Actual</div>
-      <div class="data-val cyan">14.046 km</div>
-    </div>
-    <div class="data-item">
-      <div class="data-lbl">Últ. Batería</div>
-      <div class="data-val">11 jul. 2024</div>
-    </div>
-    <div class="data-item">
-      <div class="data-lbl">Venc. RCV</div>
-      <div class="data-val" style="color:#00ff88">04 sept. 2026</div>
-    </div>
-    <div class="data-item">
-      <div class="data-lbl">Total Invertido</div>
-      <div class="data-val yellow">$1.798</div>
-    </div>
-    <div class="data-item" style="grid-column:1/-1"><div class="data-lbl">Aceite</div><div class="aceite-badge">5W40 Full Synt Shell</div></div>
-    <div class="data-item"><div class="data-lbl">Cód. Stereo</div><div class="data-val" style="color:#00f5ff;letter-spacing:3px">1993</div></div>
+    <div class="data-item"><div class="data-lbl">KM Actual</div><div class="data-val cyan">14.046 km</div></div>
+    <div class="data-item"><div class="data-lbl">Últ. Batería</div><div class="data-val">11 jul. 2024</div></div>
+    <div class="data-item"><div class="data-lbl">Venc. RCV</div><div class="data-val" style="color:#00ff88">04 sept. 2026</div></div>
+    <div class="data-item"><div class="data-lbl">Total Invertido</div><div class="data-val yellow">$1.798</div></div>
+    <div class="data-item full"><div class="data-lbl">Aceite</div><div class="aceite-badge">5W40 Full Synt Shell</div></div><div class="data-item"><div class="data-lbl">Cód. Stereo</div><div class="data-val cyan" style="letter-spacing:3px">1993</div></div>
   </div>
-  <div class="section">
-    <div class="sec-title">⚠️ ALERTAS ACTIVAS</div>
-    <div class="no-alerts">✅ Sin alertas activas</div>
-  </div>
-  <div class="section">
-    <div class="sec-title">📋 PENDIENTES</div>
-    <div class="pend-row"><span class="pnum">01</span><span>Reparación Latoneria - Parachoque delantero.</span></div>
-  </div>
-  <div class="footer">FLOTA FAMILIAR · 5/3/2026</div>
-</div>
-</body>
-</html>
+  <div class="section"><div class="sec-title">⚠️ ALERTAS ACTIVAS</div><div class="ok-row">✅ Sin alertas activas</div></div>
+  <div class="section"><div class="sec-title">📋 PENDIENTES</div><div class="pend-row"><span class="pnum">01</span><span>Reparación Latoneria - Parachoque delantero.</span></div></div>
+  <div class="footer">FLOTA FAMILIAR · 6/3/2026</div>
+</div></body></html>
